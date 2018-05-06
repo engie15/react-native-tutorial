@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 import MainScreen from './screens/MainScreen';
 
 import store from './client/store';
 
 export default class App extends Component {
   render() {
-    const MainNavigator = StackNavigator({
+    const MainNavigator = createStackNavigator({
       Main: { screen: MainScreen }
     });
 
