@@ -4,7 +4,7 @@
     "name": "jigglypuff",
     "privacy": "public",
     "version": "1.0.0",
-    "orientation": "horizontal",
+    "orientation": "landscape",
     "icon": "./assets/icons/app-icon.png",
     "loading": {
       "icon": "./assets/icons/loading-icon.png",

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { View, Platform, Text } from 'react-native';
+import { View, Platform, Image } from 'react-native';
+
+import icon from '../assets/icons/pure-icon.png'
+
 import { STATUS_BAR_HEIGHT } from '../constants';
 import Jigglypuff from '../client/components/Jigglypuff'
 
@@ -14,8 +17,13 @@ class MainScreen extends Component {
             marginTop: Platform.OS === 'android' ? STATUS_BAR_HEIGHT : 0,
             color: 'white'
         },
-        headerLeft: <View><Text>I</Text></View>
-    })
+        headerLeft: (
+            <Image
+                source={icon}
+                style={styles.imageStyle}
+            />
+        )
+    });
 
     render() {
         return (
@@ -23,6 +31,16 @@ class MainScreen extends Component {
         <Jigglypuff />
         </View>
         );
+    }
+}
+
+const styles = {
+    //you can adjust the styling here for ios and android devices depending on how it looks.
+    imageStyle: {
+        marginTop: 20,
+        marginLeft: 10,
+        width: 40,
+        height: 40
     }
 }
 
