@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import { View, Platform, Image } from 'react-native';
-
+import Expo from 'expo'
 import icon from '../assets/icons/pure-icon.png'
 
 import { STATUS_BAR_HEIGHT } from '../constants';
-import Jigglypuff from '../client/components/Jigglypuff'
+import Jigglypuff from '../client/components/Jigglypuff';
+
+
+const cacheImages = images => images.map(image => {
+    if (typeof image === 'string') return Image.prefect(image);
+
+    return Expo.Asset.fromModule(image).downloadAsync();
+    });
 
 class MainScreen extends Component {
     static  navigationOptions = () => ({
@@ -24,6 +31,20 @@ class MainScreen extends Component {
             />
         )
     });
+
+state = {
+    appIsReady: false
+}
+
+componentWillMount() {
+    this._loadAssetsAsync();
+}
+
+async _loadAssetsAsync() {
+    const imageAssets = cacheImages([icon]);  //you could place multiple images in here.
+    await Promise.all([...imageAssets]);
+    this.setState({appIsReady: true});
+}
 
     render() {
         return (

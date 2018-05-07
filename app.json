@@ -7,11 +7,8 @@
     "orientation": "landscape",
     "icon": "./assets/icons/app-icon.png",
     "loading": {
-      "icon": "./assets/icons/loading-icon.png",
+      "icon": "./assets/icons/app-icon.png",
       "hideExponentText": false
-    },
-    "packagerOpts": {
-      "assetsExts": ["ttf", "mp4"]
     },
     "ios": {
       "supportsTablet": true
