@@ -1,0 +1,6 @@
+{
+    "extends": "eslint-config-universal",
+    "rules": {
+        "no-underscore-dangle": 0
+    }
+}
