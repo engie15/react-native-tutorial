@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { createStackNavigator } from 'react-navigation';
 import MainScreen from './screens/MainScreen';
 
+
 import store from './client/store';
 
 export default class App extends Component {
@@ -12,6 +13,7 @@ export default class App extends Component {
     });
 
     return (
+      //Have yet to connect any data to redux and the state of the components.  TBC.
       <Provider store={store}>
         <MainNavigator />
       </Provider>

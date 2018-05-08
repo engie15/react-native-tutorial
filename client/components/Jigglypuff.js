@@ -24,11 +24,12 @@ class Jigglypuff extends Component {
                     containerStyle={containerStyle}
                     buttonStyle={buttonStyle}
                     selectedTextStyle={selectedTextStyle}
-                    resizeMode="cover"
-                    repeat={true}
-                    playInBackground={false}
-                    playWhenInactive={false}
-                    ignoreSilentSwitch={"ignore"}
+                    // Below code not needed yet - my attempt at adding sound with an onClick
+                    // resizeMode="cover"
+                    // repeat={true}
+                    // playInBackground={false}
+                    // playWhenInactive={false}
+                    // ignoreSilentSwitch={"ignore"}
                 >
                 </Button>
             </View>
@@ -36,6 +37,9 @@ class Jigglypuff extends Component {
     }
 }
 
+
+//Notice code below, this is css styling on this specific Jigglypuff component on my mobile app.
+// Once your 'styles' const is created, you can call the objects within on the <View, Text, Image, Button> tags being rendered above.
 const styles = {
     containerStyle: {
         height: 40,

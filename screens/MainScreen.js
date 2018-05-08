@@ -5,13 +5,15 @@ import icon from '../assets/icons/pure-icon.png'
 
 import { STATUS_BAR_HEIGHT } from '../constants';
 import Jigglypuff from '../client/components/Jigglypuff';
+import Login from '../client/components/Login';
 
 
-const cacheImages = images => images.map(image => {
-    if (typeof image === 'string') return Image.prefect(image);
+// The below code is for cacheImages.  Not in use yet.
+// const cacheImages = images => images.map(image => {
+//     if (typeof image === 'string') return Image.prefect(image);
 
-    return Expo.Asset.fromModule(image).downloadAsync();
-    });
+//     return Expo.Asset.fromModule(image).downloadAsync();
+//     });
 
 class MainScreen extends Component {
     static  navigationOptions = () => ({
@@ -49,6 +51,7 @@ async _loadAssetsAsync() {
     render() {
         return (
         <View style={{ flex: 1, backgroundColor: '#ddd'}}>
+        <Login />
         <Jigglypuff />
         </View>
         );
